@@ -1,0 +1,1 @@
+Simple project/tutorial to get used to flask framework.
