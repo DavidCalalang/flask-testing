@@ -5,7 +5,8 @@ from flask import Flask
 # This is a factory function
 def create_app(test_config=None):
     # create and configure the app
-    app = Flask(__name__, instance_relative_config=True)
+    app = Flask(__name__, instance_relative_config=True, static_folder='/templates/static')
+    #app._static_folder = '/flask_testing/templates/static'
     app.config.from_mapping(
         SECRET_KEY='dev',
         DATABASE=os.path.join(app.instance_path, 'flask-testing.sqlite'),
